@@ -123,8 +123,8 @@ if __name__ == "__main__":
     parser.add_argument('--HiddenLayerSize', '-hs', type=int, default=512, help='Size of hidden layer')
     parser.add_argument('--cellType', '-ct', type=str, default='LSTM', choices=['RNN', 'LSTM', 'GRU'], help='Type of RNN')
     parser.add_argument('--dropout_prob', '-dp', type=float, default=0.1, help='Droput probability')
-    parser.add_argument('--learningRate', '-lr', type = float, default = 0.005, help = 'Learning Rate for Optimizer')
-    parser.add_argument('--optimizer', '-op', type = str, default = "SGD", choices=["SGD", "Adam"], help = "Algorithm for back propogataion")
+    parser.add_argument('--learningRate', '-lr', type = float, default = 0.001, help = 'Learning Rate for Optimizer')
+    parser.add_argument('--optimizer', '-op', type = str, default = "Adam", choices=["SGD", "Adam"], help = "Algorithm for back propogataion")
     args = parser.parse_args()
 
     config = {
