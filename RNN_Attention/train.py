@@ -135,18 +135,18 @@ if __name__ == "__main__":
     wandb.login(key = "017101a520090630fd58ad8684de73bf54c45117")
     # Parse command-line arguments
     parser = argparse.ArgumentParser(description='Train Attention - Recurrent neural network with specified configurations')
-    parser.add_argument('--wandb_project', '-wp', type=str, default='RNN', help='Weights & Biases project name') #basic-intro
+    parser.add_argument('--wandb_project', '-wp', type=str, default='basic-intro', help='Weights & Biases project name') #basic-intro
     parser.add_argument('--wandb_entity', '-we', type=str, default='drbruap', help='Weights & Biases entity') #drbruap
-    parser.add_argument('--epochs', '-e', type=int, default=10, help='Number of epochs to train')
-    parser.add_argument('--batch_size', '-b', type=int, default=32, help='Batch size for training')
-    parser.add_argument('--embedding_size', '-es', type=int, default=32, help='Input embedding size')
+    parser.add_argument('--epochs', '-e', type=int, default=5, help='Number of epochs to train')
+    parser.add_argument('--batch_size', '-b', type=int, default=64, help='Batch size for training')
+    parser.add_argument('--embedding_size', '-es', type=int, default=16, help='Input embedding size')
     parser.add_argument('--nLayers', '-el', type=int, default=2, help='Number of layers in encoder & decoder')
-    parser.add_argument('--HiddenLayerSize', '-hs', type=int, default=256, help='Size of hidden layer')
-    parser.add_argument('--cellType', '-ct', type=str, default='RNN', choices=['RNN', 'LSTM', 'GRU'], help='Type of RNN')
-    parser.add_argument('--dropout_prob', '-dp', type=float, default=0.1, help='Droput probability')
+    parser.add_argument('--HiddenLayerSize', '-hs', type=int, default=512, help='Size of hidden layer')
+    parser.add_argument('--cellType', '-ct', type=str, default='LSTM', choices=['RNN', 'LSTM', 'GRU'], help='Type of RNN')
+    parser.add_argument('--dropout_prob', '-dp', type=float, default=0.0, help='Droput probability')
     parser.add_argument('--learningRate', '-lr', type = float, default = 0.001, help = 'Learning Rate for Optimizer')
     parser.add_argument('--weightdecay', '-wd', type = float, default = 0.001, help = 'Weight decay for Optimizer')
-    parser.add_argument('--optimizer', '-op', type = str, default = "SGD", choices=["SGD", "Adam"], help = "Algorithm for back propogataion")
+    parser.add_argument('--optimizer', '-op', type = str, default = "Adam", choices=["SGD", "Adam"], help = "Algorithm for back propogataion")
     args = parser.parse_args()
 
     config = {
