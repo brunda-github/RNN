@@ -7,7 +7,7 @@ The following packages are required to train this model
 3. wandb
 4. matplotlib
 
-## Steps to train the model
+## Steps to train the vanilla RNN model
 1. Install the required python packages as metioned above. 
 2. Download the python modules (RNN.py, train.py, CharEncoding.py)
 3. Update the train and test data variables (train_file_path , val_file_path, test_file_path) to appropriate dataset paths in train.py
