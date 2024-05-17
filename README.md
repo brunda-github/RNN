@@ -1,5 +1,7 @@
 # RNN
 
+### latin to Telugu script translation is done using the RNN model here
+
 ## Requirements
 The following packages are required to train this model
 1. torch
