@@ -138,5 +138,5 @@ if __name__ == "__main__":
     "learningRate" : args.learningRate,
     "optimizer" : args.optimizer
     }
-    init_sweep(args)
-    #train_model(args, config)
+    #init_sweep(args)
+    train_model(args, config)
