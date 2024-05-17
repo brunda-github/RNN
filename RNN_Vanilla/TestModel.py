@@ -3,7 +3,7 @@ import pandas as pd
 import wandb
 
 wandb.login(key = "")
-wandb.init(project='RNN', entity='basic-intro')
+wandb.init(project='basic-intro', entity='drbruap')
 config = {
     "epochs" : 3,
     "batch_size" : 64,
